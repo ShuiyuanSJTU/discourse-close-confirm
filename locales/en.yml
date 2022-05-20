@@ -1,0 +1,9 @@
+en:
+  theme_metadata:
+    description: ""
+  close_confirm_modal_title: "Confirm Closing"
+  close_confirm_modal_body: "You and other users cannot reply after closed. "
+  archive_confirm_modal_title: "Confirm Achiving"
+  archive_confirm_modal_body: "You and other users cannot reply, modify, delete and like after archived."
+  confirm_button_text: "Confirm"
+  cancel_button_text: "Cancel"

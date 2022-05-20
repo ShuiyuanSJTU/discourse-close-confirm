@@ -1,0 +1,9 @@
+zh_CN:
+  theme_metadata:
+    description: ""
+  close_confirm_modal_title: "确认关闭"
+  close_confirm_modal_body: "关闭话题后，您和其他用户均无法继续回复。"
+  archive_confirm_modal_title: "确认存档"
+  archive_confirm_modal_body: "存档话题后，您和其他用户均无法继续回复、编辑或者点赞。"
+  confirm_button_text: "确认"
+  cancel_button_text: "取消"

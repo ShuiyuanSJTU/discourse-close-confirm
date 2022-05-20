@@ -1,0 +1,12 @@
+{{#d-modal-body}}
+  <p>{{i18n bodyText}}</p>
+{{/d-modal-body}}
+
+<div class="modal-footer">
+  {{d-button action=(action "confirm")
+             label=(theme-prefix "confirm_button_text")
+             class="btn-danger"}}
+  {{d-button action=(route-action "closeModal")
+             label=(theme-prefix "cancel_button_text")
+             class="btn-primary"}}
+</div>
