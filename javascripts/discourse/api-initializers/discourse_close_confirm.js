@@ -9,12 +9,8 @@ export default apiInitializer("0.11.1", (api) => {
       toggleArchived() {
         const topic = this.model;
         const currentUser = this.currentUser;
-        if (
-          topic.archived ||
-          currentUser.staff ||
-          currentUser.trust_level == 4
-        ) {
-          topic.toggleStatus("archived");
+        if (topic.archived || currentUser.canManageTopic) {
+          this._super(...arguments);
         } else {
           showModal("closeConfirmModal", {
             model: { topic, actionType: "archive" },
@@ -26,10 +22,8 @@ export default apiInitializer("0.11.1", (api) => {
       toggleClosed() {
         const topic = this.model;
         const currentUser = this.currentUser;
-        if (topic.closed || currentUser.staff || currentUser.trust_level == 4) {
-          topic.toggleStatus("closed").then((result) => {
-            topic.set("topic_status_update", result.topic_status_update);
-          });
+        if (topic.closed || currentUser.canManageTopic) {
+          this._super(...arguments);
         } else {
           showModal("closeConfirmModal", {
             model: { topic, actionType: "close" },
